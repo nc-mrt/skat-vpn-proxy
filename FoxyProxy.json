@@ -1,0 +1,41 @@
+{
+  "gyi861594631599889": {
+    "type": 1,
+    "color": "#66cc66",
+    "title": "SKAT",
+    "active": true,
+    "address": "127.0.0.1",
+    "port": 8888,
+    "proxyDNS": false,
+    "username": "",
+    "password": "",
+    "whitePatterns": [
+      {
+        "title": "all URLs",
+        "pattern": "*.ccta.dk",
+        "type": 1,
+        "protocols": 1,
+        "active": true
+      }
+    ],
+    "blackPatterns": [
+      {
+        "title": "*.toldsystemet.ccta.dk",
+        "pattern": "*.toldsystemet.ccta.dk",
+        "type": 1,
+        "protocols": 1,
+        "active": true
+      }
+    ],
+    "pacURL": "",
+    "index": 9007199254740990
+  },
+  "logging": {
+    "size": 100,
+    "active": false
+  },
+  "mode": "patterns",
+  "browserVersion": "82.0.3",
+  "foxyProxyVersion": "7.5.1",
+  "foxyProxyEdition": "standard"
+}

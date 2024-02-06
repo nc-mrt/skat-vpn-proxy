@@ -1,0 +1,2 @@
+#!/bin/sh
+while sleep 1500; do wget --spider https://confluence.ccta.dk/; done
