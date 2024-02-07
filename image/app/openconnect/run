@@ -1,15 +1,3 @@
-#!/usr/bin/expect
-interp create -safe safeInterp
-safeInterp invokehidden source /mnt/vars.config
-lassign [safeInterp eval {list $user}] user
-spawn openconnect --user=$user --servercert pin-sha256:eFU51UIwCvUzkBR7o+FYSTK47aYHSR9XzJVphtGi4sw= https://hap.skat.dk
-expect "Password" {
-    puts "\r"
-    stty -echo  ;# Disable terminal echoing
-    expect_user -re "(.*)\n" {
-        set pass $expect_out(1,string)
-    }
-    stty echo   ;# Enable terminal echoing
-    send "$pass\r"
-}
-interact
+#!/bin/sh
+/pw > pass.txt
+./expect

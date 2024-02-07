@@ -6,10 +6,8 @@ fn main() {
     cmd.arg("rm").arg("skat_proxy");
     cmd.output();
 
-    let current_dir = std::env::current_dir().unwrap();
     let docker_command = format!(
-        "docker run -v {}\\vars.config:/mnt/vars.config --name skat_proxy --cap-add=NET_ADMIN -p 8888:8080 -it ncbrj/skat-vpn-proxy",
-        current_dir.display()
+        "docker run -v .\\vars.config:/mnt/vars.config --name skat_proxy --privileged -p 8888:8080 -it ncbrj/skat-vpn-proxy"
     );
 
     let mut cmd = Exec::shell(docker_command)

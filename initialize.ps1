@@ -40,7 +40,7 @@ function main(){
     Input-To-Vars-Config
 
     #Launch image
-    docker run -v $pwd\vars.config:/mnt/vars.config --cap-add=NET_ADMIN -p 8888:8080 -it --name skat_proxy ncbrj/skat-vpn-proxy
+    docker run -v .\vars.config:/mnt/vars.config --privileged -p 8888:8080 -it --name skat_proxy ncbrj/skat-vpn-proxy
 }
 function Test-Command($cmdname)
 {
