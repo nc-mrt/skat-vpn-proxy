@@ -3,7 +3,7 @@ interp create -safe safeInterp
 safeInterp invokehidden source /mnt/vars.config
 set pass [exec cat ./pass.txt]
 lassign [safeInterp eval {list $user}] user
-spawn openconnect --user=$user --servercert pin-sha256:eFU51UIwCvUzkBR7o+FYSTK47aYHSR9XzJVphtGi4sw= https://hap.skat.dk
+spawn openconnect --user=$user --servercert pin-sha256:eFU51UIwCvUzkBR7o+FYSTK47aYHSR9XzJVphtGi4sw= https://hap.skat.dk/+webvpn+/index.html
 expect "Password" {
     send "$pass\r"
 }
