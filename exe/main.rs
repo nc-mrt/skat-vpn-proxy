@@ -21,6 +21,4 @@ fn main() {
         .spawn()
         .expect("Failed to execute command")
         .wait();
-
-
 }

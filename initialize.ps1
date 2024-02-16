@@ -19,6 +19,7 @@ function main(){
     Get-File-From-Github "ImportRootCertificate.ps1"    
     Get-File-From-Github "ShortcutCreate.ps1"    
     Get-File-From-Github "vars.config.template"
+    Get-File-From-Github "vpn.ico"
     Get-Release-Github "1.0.0"
 
     Write-Host "Please elevate privileges to admin"
@@ -40,7 +41,7 @@ function main(){
     Input-To-Vars-Config
 
     #Launch image
-    docker run -v .\vars.config:/mnt/vars.config --privileged -p 8888:8080 -it --name skat_proxy ncbrj/skat-vpn-proxy
+    ./start.exe
 }
 function Test-Command($cmdname)
 {
