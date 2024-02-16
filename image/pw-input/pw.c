@@ -19,6 +19,7 @@ void get_password(char *password)
     while (1) {
         int ch = getchar();
         if (ch == '\n' || ch == EOF) {
+            fputs("\r\n", stderr);
             break;
         }
         password[i++] = (char)ch;
@@ -33,7 +34,7 @@ int main(void)
 {
     char password[BUFSIZ];
 
-    fputs("Enter password: ", stderr);
+    fputs("Enter password (right click to insert): ", stderr);
     get_password(password);
     puts(password);
     return 0;
